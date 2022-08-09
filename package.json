@@ -1,0 +1,11 @@
+{
+  "name": "aula-nodejs",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido no curso lets code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Costa",
+  "license": "MIT"
+}
