@@ -2,13 +2,16 @@ const os = require('os')
 const events = require('events');
 
 
-// setInterval(() => status_men(), 1000)
+setInterval(() => status_men(), 1000)
 
 function status_men(){
     console.clear();
-    console.log(`${os.totalmem() / 1024 / 1024 /1024} GB`);
-    console.log(`${os.freemem() / 1024 / 1024 / 1024} GB`)
-    console.log(`${os.freemem()*100 /os.totalmem()} %`)
+    let stats ={
+        menTotal: `${os.totalmem() / 1024 / 1024 /1024} GB`,
+        menFree: `${os.freemem() / 1024 / 1024 / 1024} GB`,
+        menUsage: `${os.freemem()*100 /os.totalmem()} %`
+    }
+    console.table(stats)
 }
 
 const entrosado = new events.EventEmitter()
